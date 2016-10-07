@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/PopupItem"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cinzaEscuro"
+    android:padding="15dp"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutTextView"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adicionar item"
+            android:id="@+id/textView"
+            android:layout_marginBottom="20dp"
+            android:textSize="20dp"
+            android:textColor="@color/branco"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayoutTextView"
+                android:padding="10dp"
+                android:background="@color/cinzaClaro"
+                android:layout_marginBottom="5dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/labelProduto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="Produto: "
+                        android:textSize="18dp"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/preto"
+                        />
+                    <TextView
+                        android:id="@+id/nomeProduto"
+                        android:layout_toRightOf="@+id/labelProduto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="Nome do Produto a s s s s ss s s s s s s s s s s s s "
+                        android:textSize="18dp"
+
+                        android:textColor="@color/preto"
+
+                        />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="Preço: "
+                        android:textSize="16dp"
+                        android:textColor="@color/preto"
+                        />
+                    <TextView
+                        android:id="@+id/precoProduto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="00,00"
+                        android:textSize="16dp"
+                        android:textColor="@color/preto"
+                        />
+                    <TextView
+                        android:id="@+id/unidProduto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text=""
+                        android:textSize="16dp"
+                        android:textColor="@color/preto"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayoutTextView"
+                android:background="@color/cinzaClaro"
+                android:padding="10dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="Quantidade:"
+                    android:textSize="16dp"
+                    android:textColor="@color/preto"
+
+                    />
+                <EditText
+                    android:id="@+id/qtdItem"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:text="1"
+                    android:textColor="@color/preto"
+                    android:editable="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text=""
+                    android:textSize="16dp"
+                    android:textColor="@color/preto"
+
+                    />
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayoutTextView"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/bg1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="Total: R$ "
+                android:textSize="20dp"
+                android:textColor="@color/branco"
+                android:editable="true"
+                />
+            <TextView
+                android:id="@+id/precoItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="00,00"
+                android:textSize="20dp"
+                android:textColor="@color/branco"
+                android:editable="false"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout2">
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="0dp"
+            android:layout_weight=".50"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:onClick="clickCancelar"
+            android:visibility="visible"
+            android:layout_alignTop="@+id/btnCriarLista"
+            android:layout_marginRight="20dp"
+            android:layout_alignStart="@+id/editText" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+
+            android:layout_width="0dp"
+            android:layout_weight=".50"
+            android:layout_height="wrap_content"
+            android:text="Adicionar"
+            android:onClick="clickAddItem"
+            android:visibility="visible"
+            android:layout_below="@+id/editText"
+            android:layout_alignEnd="@+id/editText"
+            android:layout_toEndOf="@+id/btnCancelar" />
+
+    </LinearLayout>
+
+</LinearLayout>

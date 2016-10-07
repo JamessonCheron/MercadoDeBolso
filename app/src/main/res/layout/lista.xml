@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- The main content view -->
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/MainLista"
+            android:background="@color/quaseBranco"
+            android:fitsSystemWindows="true"
+            >
+                <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/bg1"
+                android:paddingLeft="15dp"
+                android:paddingRight="5dp"
+                android:id="@+id/linearLayout3"
+                android:backgroundTintMode="multiply">
+
+                <Button
+                    android:id="@+id/btn_menu"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ic_action_menu"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/nomeLista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Minhas listas"
+                    android:textColor="@color/branco"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toEndOf="@+id/btn_menu"
+                    android:layout_centerVertical="true"
+                    />
+                <Button
+                    android:id="@+id/Add"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textSize="25dp"
+                    android:padding="0dp"
+                    android:layout_margin="3dp"
+                    android:textColor="@color/preto"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:onClick="onClickAddItem" />
+                <Button
+                    android:id="@+id/btnRemover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remover"
+                    android:textSize="12dp"
+                    android:layout_margin="3dp"
+                    android:textColor="@color/preto"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="invisible"
+                     />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/headerLista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout3"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@color/cinzaClaro"
+                >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/idCustomLista_listas_nome"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Produto"
+                        android:textSize="12dp"
+                        />
+                    <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:background="#bbb"
+                    >
+                        <TextView
+                            android:id="@+id/idCustomLista_listas_qtd"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/cinzaClaro"
+                            android:text="Qtd."
+                            android:textSize="12dp"
+                            android:textAlignment="center"
+                            />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/idCustomLista_listas_preco"
+                        android:layout_width="90dp"
+
+                        android:layout_height="wrap_content"
+                        android:text="Valor"
+                        android:textSize="12dp"
+                        android:textAlignment="viewEnd"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/linearLayout4"
+                android:layout_above="@+id/listaFooter"
+                android:layout_below="@+id/headerLista"
+                android:layout_alignParentStart="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <TextView
+                    android:id="@+id/textNenhumaLista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nenhum item na lista!"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/cinzaMedio"
+                    android:visibility="visible"
+                    />
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lvItens"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/listaFooter"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/quaseBranco">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        >
+
+                        <LinearLayout
+
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:textColor="@color/preto"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="Total"
+                                android:textSize="20dp"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:paddingRight="1dp"
+                                android:background="@color/cinzaClaro"
+                                >
+                                <TextView
+                                    android:id="@+id/qtdTotal"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/quaseBranco"
+                                    android:text="Qtd."
+                                    android:textSize="16dp"
+                                    android:textAlignment="textEnd"
+                                    />
+
+                            </LinearLayout>
+                            <TextView
+                                android:id="@+id/precoTotal"
+                                android:layout_width="90dp"
+                                android:layout_height="wrap_content"
+                                android:text="R$99.999,00"
+                                android:textSize="16dp"
+                                android:textColor="@color/preto"
+                                android:textAlignment="viewEnd"
+                                />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <Button
+                            android:id="@+id/FazPedido"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Fazer Pedido"
+                            android:layout_gravity="bottom|right"
+                            android:layout_below="@+id/LabelTotal"
+                            android:layout_alignParentStart="true"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    <!-- The navigation drawer -->
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:id="@+id/drawerPane"
+        android:background="@color/quaseBranco"
+        android:layout_gravity="start"
+        >
+
+        <!-- Profile Box -->
+        <RelativeLayout
+            android:id="@+id/profileBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg1"
+            android:padding="8dp" >
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/app_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/app_name"
+                    android:textColor="#fff"
+                    android:gravity="center_vertical"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jaminho Arrasa"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- List of Actions (pages) -->
+        <ListView
+            android:id="@+id/navList"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/profileBox"
+            android:choiceMode="singleChoice"
+            android:background="#ffffffff" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

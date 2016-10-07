@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/Popup"
+    android:background="@color/cinzaEscuro"
+    android:padding="15dp"
+    android:gravity="center_vertical"
+    android:layout_centerInParent="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutTextView"
+       >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nova Lista"
+            android:id="@+id/textView"
+            android:layout_marginBottom="20dp"
+            android:textSize="20dp"
+            android:textColor="@color/branco"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/linearLayoutTextView"
+        >
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="text"
+            android:hint="Nome da lista"
+            android:layout_centerVertical="true"
+            android:textColor="@color/branco"
+            android:textColorHint="@color/cinzaClaro"
+            android:backgroundTint="@color/quaseBranco"
+            android:layout_centerHorizontal="true"
+            android:editable="true"
+ />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout2">
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="0dp"
+            android:layout_weight=".50"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:onClick="clickCancelar"
+            android:visibility="visible"
+            android:layout_alignTop="@+id/btnCriarLista"
+            android:layout_marginRight="20dp"
+            android:layout_alignStart="@+id/editText" />
+
+        <Button
+            android:id="@+id/btnCriarLista"
+
+            android:layout_width="0dp"
+            android:layout_weight=".50"
+            android:layout_height="wrap_content"
+            android:text="Criar"
+            android:onClick="clickCriar"
+            android:visibility="visible"
+            android:layout_below="@+id/editText"
+            android:layout_alignEnd="@+id/editText"
+            android:layout_toEndOf="@+id/btnCancelar" />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The main content view -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/Main"
+    android:background="@color/quaseBranco"
+    android:fitsSystemWindows="false"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/bg1"
+        android:paddingLeft="15dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:id="@+id/headerApp">
+
+        <TextView
+            android:id="@+id/tituloMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cadastro de usuário"
+            android:textColor="@color/branco"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:gravity="top"
+        android:layout_below="@+id/headerApp"
+
+        >
+
+        <EditText
+            android:id="@+id/input_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite seu nome"
+            android:singleLine="true"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/cinzaEscuro"
+            android:inputType="textCapWords|textPersonName" />
+
+        <EditText
+            android:id="@+id/input_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite um login"
+            android:singleLine="true"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/cinzaEscuro"
+            android:autoLink="none"
+            android:autoText="false"
+            android:inputType="textNoSuggestions|textWebEditText" />
+
+        <EditText
+            android:id="@+id/input_senha1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Senha"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/cinzaEscuro"
+            android:inputType="textPassword" />
+        <EditText
+            android:id="@+id/input_senha2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Repetir senha"
+            android:backgroundTint="@color/cinzaEscuro"
+            android:layout_margin="10dp"
+            android:inputType="textPassword" />
+        <Button
+            android:id="@+id/btn_cadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Cadastrar"
+            android:textSize="16dp"
+            android:layout_margin="10dp"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
